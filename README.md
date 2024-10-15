@@ -20,16 +20,11 @@
 <h5>Selected articles</h5>
 
 <ul>
-  <li>STAMP: Short-Term Attention/Memory Priority Model for Session-based Recommendation (KDD'2018)</li>
-  <li>Neural Attentive Session-based Recommendation (SIGIR'2018)</li>
-  <li>TAGNN: Target Attentive Graph Neural Networks for Session-based Recommendation (SIGIR'2020)</li>
-  <li>GCE-GNN: Global Context Enhanced Graph Neural Networks for Session-based Recommendation (SIGIR'20)</li>
   <li>Enhancing Hypergraph Neural Networks with Intent Disentanglement for Session-based Recommendation (SIGIR'2022)</li>
   <li>Dynamic Intent Aware Iterative Denoising Network for Session-based Recommendation (Journal: Information Processing & Management'2022 - IF: 7.4)</li>  
   <li>Disentangled Graph Collaborative Filtering (SIGIR'2020)</li>
   <li>Learning Intents behind Interactions with Knowledge Graph for Recommendation (WWW'2021) </li>
   <li>Intent Disentanglement and Feature Self-Supervision for Novel Recommendation (Journal: IEEE Transactions on Knowledge and Data Engineering'2022 - IF: 8.9) </li>
-
 </ul>
 <h5>Required libraries to run the framework</h5>
 <ul>
@@ -88,33 +83,6 @@
   </ul>
 </p>
 <h3>Note:</h3>
-<p align="justify">STAMP and DGCF were designed by using the older versions of the TensorFlow  and Python. Therefore, we provide seperate settings to run the experiments for these models.</p>
-<ul>
-<li>Python=3.7.16</li>
-<li>TensorFlow=1.14.0</li>
-</ul>
-<h2>Follow these steps to reproduce the results for Intent Aware and Non-Intent Aware Recommender Systems</h2>
-<h5>TAGNN and baseline models</h5>
-<ul>
-<li>Download <a href="https://www.dropbox.com/sh/n281js5mgsvao6s/AADQbYxSFVPCun5DfwtsSxeda?dl=0" target="_blank">Yoochoose</a> dataset, unzip it and put the “yoochoose-clicks.dat” file into the “data” directory/folder. </li>
-<li>Run this command to reproduce the experiments for the TAGNN and baseline models on the shorter version of the Yoochoose dataset: <code>python run_experiments_TAGNN_And_baseline_models.py --dataset yoochoose1_64</code></li>
-  
-<li>Download <a href="https://www.dropbox.com/sh/n281js5mgsvao6s/AADQbYxSFVPCun5DfwtsSxeda?dl=0" target="_blank">Diginetica</a> dataset, unzip it and put the “train-item-views.csv” file into the “data” directory/folder. </li>
-<li>Run this command to reproduce the experiments for the TAGNN and baseline models on the Diginetica dataset: <code>python run_experiments_TAGNN_And_baseline_models.py --dataset diginetica</code></li> 
-</ul>
-
-<h5>GCE_GNN and baseline models</h5>
-<ul>
-<li>Download <a href="https://www.dropbox.com/sh/n281js5mgsvao6s/AADQbYxSFVPCun5DfwtsSxeda?dl=0" target="_blank">Diginetica</a> dataset, unzip it and put the “train-item-views.csv” file into the “data” directory/folder. </li>
-<li>Run this command to reproduce the experiments for the GCE_GNN and baseline models on the Diginetica dataset: <code>python run_experiments_GCE_GNN_And_baseline_models.py --dataset diginetica</code></li> 
-
-<li>Download <a href="https://www.dropbox.com/sh/n281js5mgsvao6s/AADQbYxSFVPCun5DfwtsSxeda?dl=0" target="_blank">Nowplaying</a> dataset, unzip it and put the “nowplaying.csv” file into the “data” directory/folder. </li>
-<li>Run this command to reproduce the experiments for the GCE_GNN and baseline models on the Nowplaying dataset: <code>python run_experiments_GCE_GNN_And_baseline_models.py --dataset nowplaying</code></li> 
-
-<li>Download <a href="https://www.dropbox.com/sh/n281js5mgsvao6s/AADQbYxSFVPCun5DfwtsSxeda?dl=0" target="_blank">Tmall</a> dataset, unzip it and put the “dataset15.csv” file into the “data” directory/folder. </li>
-<li>Run this command to reproduce the experiments for the GCE_GNN and baseline models on the Tmall dataset: <code>python run_experiments_GCE_GNN_And_baseline_models.py --dataset tmall</code></li> 
-</ul>
-
 <h5>DIDN and baseline models</h5>
 <ul>
 
@@ -123,17 +91,6 @@
   
 <li>Download <a href="https://www.dropbox.com/sh/n281js5mgsvao6s/AADQbYxSFVPCun5DfwtsSxeda?dl=0" target="_blank">Diginetica</a> dataset, unzip it and put the “train-item-views.csv” file into the “data” directory/folder. </li>
 <li>Run this command to reproduce the experiments for the DIDN and baseline models on the Diginetica dataset: <code>python run_experiments_for_DIDN_baseline_models.py --dataset diginetica</code></li> 
-
-</ul>
-
-<h5>NARM and baseline models</h5>
-<ul>
-
-<li>Download <a href="https://www.dropbox.com/sh/n281js5mgsvao6s/AADQbYxSFVPCun5DfwtsSxeda?dl=0" target="_blank">Yoochoose</a> dataset, unzip it and put the “yoochoose-clicks.dat” file into the “data” directory/folder. </li>
-<li>Run this command to reproduce the experiments for the NARM and baseline models on the shorter version of the Yoochoose dataset: <code>python run_experiments_for_NARM_And_baseline_models.py --dataset yoochoose1_64</code> and run the following command to create the experiments for the larger version of the Yoochoose dataset <code>python run_experiments_for_NARM_And_baseline_models.py --dataset yoochoose1_4</code>  </li>
-  
-<li>Download <a href="https://www.dropbox.com/sh/n281js5mgsvao6s/AADQbYxSFVPCun5DfwtsSxeda?dl=0" target="_blank">Diginetica</a> dataset, unzip it and put the “train-item-views.csv” file into the “data” directory/folder. </li>
-<li>Run this command to reproduce the experiments for the NARM and baseline models on the Diginetica dataset: <code>python run_experiments_for_NARM_And_baseline_models.py --dataset diginetica</code></li> 
 
 </ul>
 
@@ -167,13 +124,7 @@
 
 <li>Run this command to reproduce the experiments for the IDS4NR_LFM and baseline models on the Music dataset: <code>python run_experiments_IDS4NR_baselines_algorithms.py --dataset Music --model LFM</code>  </li>
 </ul>
-<h5>STAMP and baseline models</h5>
-<ul>
-<li>Download <a href="https://www.dropbox.com/sh/n281js5mgsvao6s/AADQbYxSFVPCun5DfwtsSxeda?dl=0" target="_blank">Yoochoose</a> dataset, unzip it and put the “yoochoose-clicks.dat” file into the “data” directory/folder. </li>
-<li>Run this command to reproduce the experiments for the STAMP and baseline models on the shorter version of the Yoochoose dataset: <code>python run_experiments_STAMP_baseline_models.py -m stamp_rsc -d rsc15_64 -n</code> and run the following command to create the experiments for the larger version of the Yoochoose dataset <code>python run_experiments_STAMP_baseline_models.py -m stamp_rsc -d rsc15_4 -n</code>  </li>
-<li>Download <a href="https://www.dropbox.com/sh/n281js5mgsvao6s/AADQbYxSFVPCun5DfwtsSxeda?dl=0" target="_blank">Diginetica</a> dataset, unzip it and put the “train-item-views.csv” file into the “data” directory/folder. </li>
-<li>Run this command to reproduce the experiments for the STAMP and baseline models on the Diginetica dataset: <code>python run_experiments_STAMP_baseline_models.py -m stamp_cikm -d digi -n</code></li> 
-</ul>
+
 
 <h5>DGCF and baseline models</h5>
 <ul>
