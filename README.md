@@ -20,11 +20,19 @@
 <h5>Selected articles</h5>
 
 <ul>
-  <li>Enhancing Hypergraph Neural Networks with Intent Disentanglement for Session-based Recommendation (SIGIR'2022)</li>
-  <li>Dynamic Intent Aware Iterative Denoising Network for Session-based Recommendation (Journal: Information Processing & Management'2022 - IF: 7.4)</li>  
-  <li>Disentangled Graph Collaborative Filtering (SIGIR'2020)</li>
-  <li>Learning Intents behind Interactions with Knowledge Graph for Recommendation (WWW'2021) </li>
-  <li>Intent Disentanglement and Feature Self-Supervision for Novel Recommendation (Journal: IEEE Transactions on Knowledge and Data Engineering'2022 - IF: 8.9) </li>
+<li> Modeling Multi-Purpose Sessions for Next-Item Recommendations via Mixture-Channel Purpose Routing Networks (JCAI'19)</li> 
+<li>Disentangled Graph Collaborative Filtering (SIGIR'2020)</li>
+<li>Learning Intents behind Interactions with Knowledge Graph for Recommendation (WWW'2021) </li>
+<li> Intent Contrastive Learning for Sequential Recommendation (WWW'22)</li>
+<li>Enhancing Hypergraph Neural Networks with Intent Disentanglement for Session-based Recommendation (SIGIR'2022)</li>
+<li>Dynamic Intent Aware Iterative Denoising Network for Session-based Recommendation (Journal: Information Processing & Management'2022 - IF: 7.4)</li> 
+<li>Intent Disentanglement and Feature Self-Supervision for Novel Recommendation (Journal: IEEE Transactions on Knowledge and Data Engineering'2022 - IF: 8.9) </li>
+<li>Efficiently Leveraging Multi-level User Intent for Session-based Recommendation via Atten-Mixer Network (WSDM'23)</li>
+<li>Sparse-Interest Network for Sequential Recommendation (WSDM'23)</li>  
+
+  
+  
+
 </ul>
 <h5>Required libraries to run the framework</h5>
 <ul>

@@ -21,7 +21,7 @@ import numpy as np
 import argparse
 import torch
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset', default='retailrocket',help='dataset name: diginetica/gowalla/lastfm/yoochoose1_4/retailrocket/yoochoose1_64')
+parser.add_argument('--dataset', default='yoochoose1_4',help='dataset name: diginetica/gowalla/lastfm/yoochoose1_4/retailrocket/yoochoose1_64')
 parser.add_argument('--batchSize', type=int, default=256, help='input batch size')
 parser.add_argument('--hiddenSize', type=int, default=100, help='hidden state size')
 parser.add_argument('--epoch', type=int, default=10, help='the number of epochs to train for')
