@@ -103,31 +103,26 @@
 
 <h5>Enhancing Hypergraph Neural Networks with Intent Disentanglement for Session-based Recommendation (HIDE)</h5>
 <ul>
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Tmall</a> dataset, unzip it and put the “dataset15.csv” file into the “data” directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Tmall</a> dataset, unzip it and put the "dataset15.csv" file into the "data" directory/folder. </li>
 <li>Run this command to reproduce the experiments for the HIDE and baseline models on the Tmall dataset: <code>python run_experiments_HIDE_baseline_models.py --dataset Tmall</code></li> 
 <li>Run this command to reproduce the experiments for the HIDE model with original train-test splits and without any modification in the code: <code>python run_experiments_for_HIDE_withoutAnyChanges.py --dataset Tmall</code></li>
 </ul>
 
-
-
 <h5>Modeling Multi-Purpose Sessions for Next-Item Recommendations via Mixture-Channel Purpose Routing Networks (Atten-Mixer)</h5>
 <ul>
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Diginetica</a> dataset, unzip it and put the train-item-views.csv” file into the “data” directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Diginetica</a> dataset, unzip it and put the "train-item-views.csv" file into the "data" directory/folder. </li>
 <li>Run this command to reproduce the experiments for the Atten-Mixer and baseline models on the Diginetica dataset: <code>python run_experiments_AttenMixer_baseline_models.py --dataset diginetica</code></li>
 </ul>
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Gowalla</a> dataset, unzip it and put the "loc-gowalla_totalCheckins.txt.gz" file into the “data” directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Gowalla</a> dataset, unzip it and put the "loc-gowalla_totalCheckins.txt.gz" file into the "data" directory/folder. </li>
 <li>Run this command to reproduce the experiments for the Atten-Mixer and baseline models on the Diginetica dataset: <code>python run_experiments_AttenMixer_baseline_models.py --dataset diginetica</code></li>
 </ul>
-
-
-
 
 
 
 
 <h5>Efficiently Leveraging Multi-level User Intent for Session-based Recommendation via Atten-Mixer Network (MCPRN)</h5>
 <ul>
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Yoochoose</a> dataset, unzip it and put the yoochoose-buys.csv” file into the “data” directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Yoochoose</a> dataset, unzip it and put the "yoochoose-buys.csv" file into the "data" directory/folder. </li>
 <li>Run this command to reproduce the experiments for the MCPRN and baseline models on the Yoochoose-buys dataset: <code>python run_experiments_for_MCRPN_baseline_models.py --dataset yoochoose</code></li>
 </ul>
 
