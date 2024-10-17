@@ -88,7 +88,7 @@
         then run this command to install the required libraries to run the experiments on GPU: <code>pip install -r requirements_gpu.txt</code></li>
   </ul>
 </p>
-<h3>Follow following instructions commands to run experiments for Intent Aware and Non-intent Aware recommender systems</h3>
+<h3>Follow following instructions to run experiments for Intent Aware and Non-intent Aware recommender systems</h3>
 <h5>DIDN and baseline models</h5>
 <ul>
 
