@@ -74,7 +74,6 @@
   
   <li>Run the command to mount the current directory <i>IntentAwareRS</i> to the docker container named as <i>IntentAwareRS_container</i>: <code>docker run --name IntentAwareRS_container  -it -v "$(pwd):/IntentAwareRS" -it shefai/IntentAwareRS</code>. If you have the support of CUDA-capable GPUs then run the following command to attach GPUs with the container: <code>docker run --name IntentAwareRS_container  -it --gpus all -v "$(pwd):/IntentAwareRS" -it shefai/IntentAwareRS</code></li> 
 <li>If you are already inside the runing container, run the command to navigate to the mounted directory <i>IntentAwareRS</i>: <code>cd /IntentAwareRS</code> otherwise starts the "IntentAwareRS"</li>
-<li>Finally, follow the given instructions to run the experiments for each model </li>
 </ul>  
 <h5>Using Anaconda</h5>
   <ul>
@@ -88,7 +87,7 @@
         then run this command to install the required libraries to run the experiments on GPU: <code>pip install -r requirements_gpu.txt</code></li>
   </ul>
 </p>
-<h4>Follow following instructions to run experiments for Intent Aware and Non-intent Aware recommender systems</h4>
+<h2>Instructions to Run Experiments for Intent Aware and Non-intent Aware Recommender Systems</h2>
 <h5> Dynamic Intent-aware Iterative Denoising Network for Session-based Recommendation (DIDN)</h5>
 <ul>
 
