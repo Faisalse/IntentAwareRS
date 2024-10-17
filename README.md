@@ -88,8 +88,8 @@
         then run this command to install the required libraries to run the experiments on GPU: <code>pip install -r requirements_gpu.txt</code></li>
   </ul>
 </p>
-<h3>Follow following instructions to run experiments for Intent Aware and Non-intent Aware recommender systems</h3>
-<h5>DIDN and baseline models</h5>
+<h4>Follow following instructions to run experiments for Intent Aware and Non-intent Aware recommender systems</h4>
+<h5> Dynamic Intent-aware Iterative Denoising Network for Session-based Recommendation (DIDN)</h5>
 <ul>
 
 <li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Yoochoose</a> dataset, unzip it and put the “yoochoose-clicks.dat” file into the “data” directory/folder. </li>
@@ -100,7 +100,7 @@
 
 </ul>
 
-<h5>HIDE and baseline models</h5>
+<h6>Enhancing Hypergraph Neural Networks with Intent Disentanglement for Session-based Recommendation (HIDE)</h6>
 <ul>
 
 <li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Tmall</a> dataset, unzip it and put the “dataset15.csv” file into the “data” directory/folder. </li>
