@@ -73,7 +73,7 @@
   <li>Move into the <b>IntentAwareRS</b> directory</li>
   
   <li>Run the command to mount the current directory <i>IntentAwareRS</i> to the docker container named as <i>IntentAwareRS_container</i>: <code>docker run --name IntentAwareRS_container  -it -v "$(pwd):/IntentAwareRS" -it shefai/IntentAwareRS</code>. If you have the support of CUDA-capable GPUs then run the following command to attach GPUs with the container: <code>docker run --name IntentAwareRS_container  -it --gpus all -v "$(pwd):/IntentAwareRS" -it shefai/IntentAwareRS</code></li> 
-<li>If you are already inside the runing container, run the command to navigate to the mounted directory <i>IntentAwareRS</i>: <code>cd /IntentAwareRS</code> otherwise starts the "IntentAwareRS"</li>
+<li>If you are already inside the runing container, run the command to navigate to the mounted directory <i>IntentAwareRS</i>: <code>cd /IntentAwareRS</code> otherwise starts the "IntentAwareRS_container"</li>
 </ul>  
 <h5>Using Anaconda</h5>
   <ul>
@@ -95,34 +95,32 @@
 
 <h5> Dynamic Intent-aware Iterative Denoising Network for Session-based Recommendation (DIDN)</h5>
 <ul>
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Yoochoose</a> dataset, unzip it and put the "yoochoose-clicks.dat" file into the "data" directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Yoochoose</a> dataset, unzip it and put the "yoochoose-clicks.dat" file into the "data" directory/folder </li>
 <li>Run this command to reproduce the experiments for the DIDN and baseline models on the shorter version of the Yoochoose dataset: <code>python run_experiments_for_DIDN_baseline_models.py --dataset yoochoose1_64</code> and run the following command to create the experiments for the larger version of the Yoochoose dataset <code>python run_experiments_for_DIDN_baseline_models.py --dataset yoochoose1_4</code>  </li>
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Diginetica</a> dataset, unzip it and put the "train-item-views.csv" file into the "data" directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Diginetica</a> dataset, unzip it and put the "train-item-views.csv" file into the "data" directory/folder </li>
 <li>Run this command to reproduce the experiments for the DIDN and baseline models on the Diginetica dataset: <code>python run_experiments_for_DIDN_baseline_models.py --dataset diginetica</code></li> 
 </ul>
 
 <h5>Enhancing Hypergraph Neural Networks with Intent Disentanglement for Session-based Recommendation (HIDE)</h5>
 <ul>
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Tmall</a> dataset, unzip it and put the "dataset15.csv" file into the "data" directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Tmall</a> dataset, unzip it and put the "dataset15.csv" file into the "data" directory/folder </li>
 <li>Run this command to reproduce the experiments for the HIDE and baseline models on the Tmall dataset: <code>python run_experiments_HIDE_baseline_models.py --dataset Tmall</code></li>
 </ul>
 
 <h5>Modeling Multi-Purpose Sessions for Next-Item Recommendations via Mixture-Channel Purpose Routing Networks (Atten-Mixer)</h5>
 <ul>
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Diginetica</a> dataset, unzip it and put the "train-item-views.csv" file into the "data" directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Diginetica</a> dataset, unzip it and put the "train-item-views.csv" file into the "data" directory/folder </li>
 <li>Run this command to reproduce the experiments for the Atten-Mixer and baseline models on the Diginetica dataset: <code>python run_experiments_AttenMixer_baseline_models.py --dataset diginetica</code></li>
 
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Gowalla</a> dataset, unzip it and put the "loc-gowalla_totalCheckins.txt.gz" file into the "data" directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Gowalla</a> dataset, unzip it and put the "loc-gowalla_totalCheckins.txt.gz" file into the "data" directory/folder </li>
 <li>Run this command to reproduce the experiments for the Atten-Mixer and baseline models on the Gowalla dataset: <code>python run_experiments_AttenMixer_baseline_models.py --dataset gowalla</code></li>
 
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Yoochoose</a> dataset, unzip it and put the "yoochoose-clicks.dat" file into the "data" directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Yoochoose</a> dataset, unzip it and put the "yoochoose-clicks.dat" file into the "data" directory/folder </li>
 <li>Run this command to reproduce the experiments for the Atten-Mixer and baseline models on the shorter version of the Yoochoose dataset: <code>python python run_experiments_AttenMixer_baseline_models.py --dataset yoochoose1_64</code> and run the following command to create the experiments for the larger version of the Yoochoose dataset <code>python python run_experiments_AttenMixer_baseline_models.py --dataset yoochoose1_4</code>  </li>
 
 
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Retailrocket</a> dataset, unzip it and put the "events.csv" file into the "data" directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Retailrocket</a> dataset, unzip it and put the "events.csv" file into the "data" directory/folder </li>
 <li>Run this command to reproduce the experiments for the Atten-Mixer and baseline models on the Diginetica dataset: <code>python run_experiments_AttenMixer_baseline_models.py --dataset retailrocket</code></li>
-
-
 </ul>
 
 
@@ -130,7 +128,7 @@
 
 <h5>Efficiently Leveraging Multi-level User Intent for Session-based Recommendation via Atten-Mixer Network (MCPRN)</h5>
 <ul>
-<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Yoochoose</a> dataset, unzip it and put the "yoochoose-buys.csv" file into the "data" directory/folder. </li>
+<li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Yoochoose</a> dataset, unzip it and put the "yoochoose-buys.csv" file into the "data" directory/folder </li>
 <li>Run this command to reproduce the experiments for the MCPRN and baseline models on the Yoochoose-buys dataset: <code>python run_experiments_for_MCRPN_baseline_models.py --dataset yoochoose</code></li>
 </ul>
 
