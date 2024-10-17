@@ -100,7 +100,7 @@
 
 </ul>
 
-<h6>Enhancing Hypergraph Neural Networks with Intent Disentanglement for Session-based Recommendation (HIDE)</h6>
+<h5>Enhancing Hypergraph Neural Networks with Intent Disentanglement for Session-based Recommendation (HIDE)</h5>
 <ul>
 
 <li>Download <a href="https://drive.google.com/drive/folders/1GocLZfbuwtxUjdRVEKq9xONyDbOjoNm4?usp=sharing" target="_blank">Tmall</a> dataset, unzip it and put the “dataset15.csv” file into the “data” directory/folder. </li>
