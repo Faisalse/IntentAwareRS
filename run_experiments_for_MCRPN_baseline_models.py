@@ -57,13 +57,8 @@ def main():
         train_data_full, test_data, item_no, _, _ = split_data_rsc15(filter_data_)
         val_train_data, valid_data = split_validation(train_data_full, opt.valid_portion)
         n_node = item_no
-    elif opt.dataset == 'tmall':
-        name = "dataset15.csv"
-        dataset = load_data_tmall(data_path / name)
-        filter_data_ = filter_data_tmall(dataset)
-        train_data_full, test_data, item_no = split_data_tmall(filter_data_)
-        val_train_data, valid_data = split_validation(train_data_full, opt.valid_portion)
-        n_node = item_no
+    else:
+        print("Please, dataset information..............")
     val_train_data = Data(val_train_data, shuffle=True, n_node = n_node)
     valid_data = Data(valid_data, shuffle=False ,n_node = n_node)
 
