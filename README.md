@@ -166,6 +166,18 @@
 <li>Run this command to reproduce the experiments for the DGCF on the Amazon-book dataset: <code>python run_experiments_for_DGCF_algorithm.py --dataset amazonbook</code>  </li>
 <li>Run this command to reproduce the experiments for the baseline models on the Amazon-book dataset: <code>python run_experiments_DGCF_baseline_algorithms.py --dataset amazonbook</code>  </li>
 
+<h5>Note: The DGCF was implemented using TensorFlow 1.14, which does not support current versions of Python. Therefore, we provide a separate installation guide to run the experiments for DGCF model</h5>
+
+<h5>Using Anaconda</h5>
+  <ul>
+    <li>Download Anaconda from <a href="https://www.anaconda.com/">https://www.anaconda.com/</a> and install it</li>
+    <li>Clone the GitHub repository by using this link: <code>https://github.com/Faisalse/IntentAwareRS.git</code></li>
+    <li>Open the Anaconda command prompt</li>
+    <li>Move into the <b>IntentAwareRS</b> directory</li>
+    <li>Run this command to create virtual environment: <code>conda create --name DGCF_env python=3.6</code></li>
+    <li>Run this command to activate the virtual environment: <code>conda activate DGCF_env</code></li>
+    <li>Run this command to install the required libraries for CPU: <code>pip install -r requirements_dgcf.txt</code></li>
+  </ul>
 
 </body>
 </html>  
