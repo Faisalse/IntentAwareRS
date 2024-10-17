@@ -29,11 +29,9 @@
 <li>Intent Disentanglement and Feature Self-Supervision for Novel Recommendation (Journal: IEEE Transactions on Knowledge and Data Engineering'2022 - IF: 8.9) </li>
 <li>Efficiently Leveraging Multi-level User Intent for Session-based Recommendation via Atten-Mixer Network (WSDM'23)</li>
 <li>Sparse-Interest Network for Sequential Recommendation (WSDM'23)</li>  
-
-  
-  
-
 </ul>
+
+
 <h5>Required libraries to run the framework</h5>
 <ul>
   <li>Anaconda 4.X (Python 3.8 or higher)</li>
@@ -71,21 +69,21 @@
 <ul>
   <li>Download and install Docker from <a href="https://www.docker.com/">https://www.docker.com/</a></li>
   <li>Run the following command to "pull Docker Image" from Docker Hub: <code>docker pull shefai/intent_aware_recomm_systems</code>
-  <li>Clone the GitHub repository by using the link: <code>https://github.com/Faisalse/Intent_Aware_Recomm_Systems.git</code>
-  <li>Move into the <b>Intent_Aware_Recomm_Systems</b> directory</li>
+  <li>Clone the GitHub repository by using the link: <code>https://github.com/Faisalse/IntentAwareRS.git</code>
+  <li>Move into the <b>IntentAwareRS</b> directory</li>
   
-  <li>Run the command to mount the current directory <i>Intent_Aware_Recomm_Systems</i> to the docker container named as <i>intent_aware_recomm_systems_container</i>: <code>docker run --name intent_aware_recomm_systems_container  -it -v "$(pwd):/Intent_Aware_Recomm_Systems" -it shefai/intent_aware_recomm_systems</code>. If you have the support of CUDA-capable GPUs then run the following command to attach GPUs with the container: <code>docker run --name intent_aware_recomm_systems_container  -it --gpus all -v "$(pwd):/SessionRecGraphFusion" -it shefai/intent_aware_recomm_systems</code></li> 
-<li>If you are already inside the runing container then run the command to navigate to the mounted directory <i>Intent_Aware_Recomm_Systems</i>: <code>cd /Intent_Aware_Recomm_Systems</code> otherwise starts the "intent_aware_recomm_systems_container"</li>
+  <li>Run the command to mount the current directory <i>IntentAwareRS</i> to the docker container named as <i>IntentAwareRS_container</i>: <code>docker run --name IntentAwareRS_container  -it -v "$(pwd):/IntentAwareRS" -it shefai/IntentAwareRS</code>. If you have the support of CUDA-capable GPUs then run the following command to attach GPUs with the container: <code>docker run --name IntentAwareRS_container  -it --gpus all -v "$(pwd):/IntentAwareRS" -it shefai/IntentAwareRS</code></li> 
+<li>If you are already inside the runing container, run the command to navigate to the mounted directory <i>IntentAwareRS</i>: <code>cd /IntentAwareRS</code> otherwise starts the "IntentAwareRS"</li>
 <li>Finally, follow the given instructions to run the experiments for each model </li>
 </ul>  
 <h5>Using Anaconda</h5>
   <ul>
     <li>Download Anaconda from <a href="https://www.anaconda.com/">https://www.anaconda.com/</a> and install it</li>
-    <li>Clone the GitHub repository by using this link: <code>https://github.com/Faisalse/Intent_Aware_Recomm_Systems.git</code></li>
+    <li>Clone the GitHub repository by using this link: <code>https://github.com/Faisalse/IntentAwareRS.git</code></li>
     <li>Open the Anaconda command prompt</li>
-    <li>Move into the <b>Intent_Aware_Recomm_Systems</b> directory</li>
-    <li>Run this command to create virtual environment: <code>conda create --name Intent_Aware_Recomm_Systems python=3.8</code></li>
-    <li>Run this command to activate the virtual environment: <code>conda activate Intent_Aware_Recomm_Systems</code></li>
+    <li>Move into the <b>IntentAwareRS</b> directory</li>
+    <li>Run this command to create virtual environment: <code>conda create --name IntentAwareRS_env python=3.8</code></li>
+    <li>Run this command to activate the virtual environment: <code>conda activate IntentAwareRS_env</code></li>
     <li>Run this command to install the required libraries for CPU: <code>pip install -r requirements_cpu.txt</code>. However, if you have support of CUDA-capable GPUs, 
         then run this command to install the required libraries to run the experiments on GPU: <code>pip install -r requirements_gpu.txt</code></li>
   </ul>
