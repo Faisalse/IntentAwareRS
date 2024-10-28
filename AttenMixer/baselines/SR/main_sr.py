@@ -76,6 +76,22 @@ class SequentialRulesMain:
             self.train_data = train
             self.unique_items_ids  = self.train_data.ItemId.unique()
             self.test_data = test
+
+        elif dataset == "retailrocket":
+            name = "events.csv"
+            data =  load_data_retail(data_path / name)
+            data = filter_data(data)
+            train, test = split_data_only(data)
+
+            self.train_data = train
+            self.unique_items_ids  = self.train_data.ItemId.unique()
+            self.test_data = test
+
+            self.steps = 15
+            self.weighting = "quadratic"
+
+            self.pruning = 5
+            self.session_weighting = "div" 
             
         else:
             print("Mention your datatypes")

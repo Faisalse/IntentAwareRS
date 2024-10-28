@@ -17,10 +17,6 @@ from AttenMixer.accuracy_measures import *
 
 class STAN_MAIN:
     
-    # self, k, sample_size=5000, sampling='recent', remind=True, 
-    #extend=False, lambda_spw=1.02, lambda_snh=5, lambda_inh=2.05 , 
-    #session_key = 'SessionId', item_key= 'ItemId', time_key= 'Time' ):
-    
     def __init__(self, data_path, result_path,  dataset = "diginetica"):
         self.dataset = dataset
         self.result_path = result_path
@@ -74,6 +70,23 @@ class STAN_MAIN:
             self.train_data = train
             self.unique_items_ids  = self.train_data.ItemId.unique()
             self.test_data = test
+
+        elif dataset == "retailrocket": 
+
+            name = "events.csv"
+            data =  load_data_retail(data_path / name)
+            data = filter_data(data)
+            train, test = split_data_only(data)
+
+            self.train_data = train
+            self.unique_items_ids  = self.train_data.ItemId.unique()
+            self.test_data = test 
+
+            self.k = 750
+            self.sample_size = 2800
+            self.lambda_spw = 0.17
+            self.lambda_snh = 520
+            self.lambda_inh = 0.51
             
         else:
             print("Mention your datatypes")

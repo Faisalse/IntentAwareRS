@@ -74,8 +74,28 @@ class VSTAN_MAIN:
             self.train_data = train
             self.unique_items_ids  = self.train_data.ItemId.unique()
             self.test_data = test
+
+        elif dataset == "retailrocket": 
+            
+            self.k = 150
+            self.sample_size = 190
+            self.lambda_spw = 11.206
+            self.lambda_snh = 5
+            self.lambda_inh = 3
+            self.lambda_idf = 1
+
+            name = "events.csv"
+            data =  load_data_retail(data_path / name)
+            data = filter_data(data)
+            train, test = split_data_only(data)
+
+            self.train_data = train
+            self.unique_items_ids  = self.train_data.ItemId.unique()
+            self.test_data = test  
+        
         else:
             print("Mention your datatypes")
+            
             
             
     def fit_(self, mrr, hirate):

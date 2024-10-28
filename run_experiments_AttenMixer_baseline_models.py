@@ -21,7 +21,7 @@ import numpy as np
 import argparse
 import torch
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset', default='yoochoose1_4',help='dataset name: diginetica/gowalla/lastfm/yoochoose1_4/retailrocket/yoochoose1_64')
+parser.add_argument('--dataset', default='retailrocket',help='dataset name: diginetica/gowalla/lastfm/yoochoose1_4/retailrocket/yoochoose1_64')
 parser.add_argument('--batchSize', type=int, default=256, help='input batch size')
 parser.add_argument('--hiddenSize', type=int, default=100, help='hidden state size')
 parser.add_argument('--epoch', type=int, default=10, help='the number of epochs to train for')
@@ -44,8 +44,7 @@ parser.add_argument('--dropout', type=float, default=0.1)
 parser.add_argument('--dot', default=True, action='store_true')
 parser.add_argument('--last_k', type=int, default=7)
 parser.add_argument('--l_p', type=int, default=7)
-parser.add_argument('--MRR', type=float, default=[10, 20], help='learning rate') 
-parser.add_argument('--HR', type=float, default=[10, 20], help='learning rate')
+parser.add_argument('--topk', type=float, default=[10, 20], help='learning rate')
 parser.add_argument_group()
 opt = parser.parse_args()
 data_path = Path("data/")
@@ -54,11 +53,13 @@ result_path = Path("results/")
 result_path = result_path.resolve()
  
 MRR_dictionary = dict()
-for i in opt.MRR:
+for i in opt.topk:
     MRR_dictionary["MRR_"+str(i)] = MRR(i)      
 HR_dictionary = dict()
-for i in opt.HR:
+for i in opt.topk:
     HR_dictionary["HR_"+str(i)] = HR(i)
+
+
 
 hyperparameter_defaults = vars(opt)
 config = hyperparameter_defaults
@@ -143,7 +144,7 @@ def main():
     seed = 123
     pl.seed_everything(seed)
     if opt.dataset == 'diginetica':
-    
+        
         name = "train-item-views.csv"
         obj1 = DIGI()
         train_features, test_features, n_node, original_train, original_test, train_validation, test_validation,  word2index, index2word =  obj1.data_load(data_path / name)
@@ -163,6 +164,7 @@ def main():
         train_features, test_features, n_node, _, _, _, _ =  obj1.data_load(data_path / name)
         print("Number of unique artist:  ", n_node)
         opt.heads      = 1
+
     elif opt.dataset == 'yoochoose1_64' or opt.dataset == 'yoochoose1_4':
 
         name = "yoochoose-clicks.dat"
@@ -175,13 +177,12 @@ def main():
         n_node = len(obj1.item_dict) + 1
         train_features = [tr_seqs, tr_labs]
         test_features = [te_seqs, te_labs]
-        
         opt.batchSize  = 256
         opt.hiddenSize = 100
         opt.epoch      = 30
         opt.lr         =    0.0078
         opt.l2         =    0.0000628
-        #opt.heads      = 8
+        opt.heads      = 4
 
     elif opt.dataset == "retailrocket":
         name = "events.csv"
@@ -218,17 +219,19 @@ def main():
     name = "Atten_Mixer_"+opt.dataset+".txt"
     print(result_frame)
     result_frame.to_csv(result_path/name, sep='\t', index = False) 
+
+
 if __name__ == "__main__":
     #obj = SequentialRulesMain(data_path, result_path, dataset = opt.dataset)
-    #obj.fit_(opt.MRR, opt.HR)
+    #obj.fit_(opt.topk, opt.topk)
     
     #obj = SFCKNN_MAIN(data_path, result_path, dataset = opt.dataset)
-    #obj.fit_(opt.MRR, opt.HR)
+    #obj.fit_(opt.topk, opt.topk)
     
     #obj = STAN_MAIN(data_path, result_path, dataset = opt.dataset)
-    #obj.fit_(opt.MRR, opt.HR)
-    #obj = VSTAN_MAIN(data_path, result_path, dataset = opt.dataset)
-    #obj.fit_(opt.MRR, opt.HR)
-    main()
+    #obj.fit_(opt.topk, opt.topk)s
+    obj = VSTAN_MAIN(data_path, result_path, dataset = opt.dataset)
+    obj.fit_(opt.topk, opt.topk)
+    #main()
     
     

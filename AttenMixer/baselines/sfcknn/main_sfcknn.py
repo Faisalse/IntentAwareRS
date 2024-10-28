@@ -78,7 +78,23 @@ class SFCKNN_MAIN:
             _, _, _, train, test,_,_ = obj.data_load(data_path / name)
             self.train_data = train
             self.unique_items_ids  = self.train_data.ItemId.unique()
-            self.test_data = test    
+            self.test_data = test
+
+        elif dataset == "retailrocket": 
+
+            name = "events.csv"
+            data =  load_data_retail(data_path / name)
+            data = filter_data(data)
+            train, test = split_data_only(data)
+
+            self.train_data = train
+            self.unique_items_ids  = self.train_data.ItemId.unique()
+            self.test_data = test  
+
+            self.k = 20
+            self.sample_size = 300
+            self.similarity = "cosine" 
+             
         else:
             print("Mention your datatypes")
             
