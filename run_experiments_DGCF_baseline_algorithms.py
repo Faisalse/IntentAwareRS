@@ -21,7 +21,7 @@ if __name__ == '__main__':
     model = "DGCF"
     dataset_name = "gowalla" # yelp2018, gowalla, amazonbook
     parser = argparse.ArgumentParser(description='Accept data name as input')
-    parser.add_argument('--dataset', type = str, default='yelp2018', help="yelp2018, gowalla, amazonbook")
+    parser.add_argument('--dataset', type = str, default='amazonbook', help="yelp2018, gowalla, amazonbook")
 
     # python run_experiments_DGCF_baseline_algorithms.py --dataset yelp2018
     # python run_experiments_DGCF_baseline_algorithms.py --dataset gowalla

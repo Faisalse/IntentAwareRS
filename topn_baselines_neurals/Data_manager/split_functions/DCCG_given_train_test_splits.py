@@ -10,7 +10,7 @@ import numpy as np
 import scipy.sparse as sps
 from topn_baselines_neurals.Data_manager.IncrementalSparseMatrix import IncrementalSparseMatrix
 
-def split_train_test_validation(loaded_dataset, given_test_data, validation = False):
+def split_train_test_validation(loaded_dataset, test_data_dictionary, validation = False):
     """
     The function splits an URM in two matrices selecting the k_out interactions one user at a time
     :param URM:
@@ -24,7 +24,7 @@ def split_train_test_validation(loaded_dataset, given_test_data, validation = Fa
     URM = loaded_dataset.AVAILABLE_URM['URM_all']
     
     
-    updated_test_data = update_item_ids_of_original_data(loaded_dataset.item_original_ID_to_index, given_test_data)
+    updated_test_data = update_item_ids_of_original_data(loaded_dataset.item_original_ID_to_index,loaded_dataset.user_original_ID_to_index, test_data_dictionary)
     
 
     assert k_out > 0, "k_out must be a value greater than 0, provided was '{}'".format(k_out)
@@ -42,9 +42,9 @@ def split_train_test_validation(loaded_dataset, given_test_data, validation = Fa
          URM_validation_builder = IncrementalSparseMatrix(auto_create_row_mapper=False, n_rows = n_users,
                                                           auto_create_col_mapper=False, n_cols = n_items)
     
-    for user_id in range(n_users):
+    for user_id in updated_test_data:
 
-        test_records_items = np.array(list(updated_test_data[user_id]))
+        test_records_items = np.array(list(updated_test_data[int(user_id)]))
         test_data = np.ones(len(test_records_items))
 
         start_user_position = URM.indptr[user_id]
@@ -110,15 +110,16 @@ def split_train_test_validation(loaded_dataset, given_test_data, validation = Fa
     return URM_train, URM_test
 
 
-def update_item_ids_of_original_data(dictionary_item_original_to_index, list_test_data):
-    updated_original_test_data = list()
+def update_item_ids_of_original_data(dictionary_item_original_to_index, user_original_ID_to_index,  test_data_dictionary):
+    updated_original_test_data = dict()
 
-    for items_set in list_test_data:
+    for uid, items_set in test_data_dictionary.items():
         temp = set()
+
         for item in items_set:
             temp.add(dictionary_item_original_to_index[str(item)])
         
-        updated_original_test_data.append(temp)
+        updated_original_test_data[user_original_ID_to_index[str(uid)]] = temp
 
     return updated_original_test_data
 

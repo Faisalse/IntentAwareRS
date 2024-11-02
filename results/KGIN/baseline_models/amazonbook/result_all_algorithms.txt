@@ -1,0 +1,20 @@
+Algorithm: <class 'topn_baselines_neurals.Recommenders.NonPersonalizedRecommender.Random'> - Exception: float division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.NonPersonalizedRecommender.TopPop'> - Exception: float division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.KNN.ItemKNNCFRecommender.ItemKNNCFRecommender'> - Exception: division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.KNN.UserKNNCFRecommender.UserKNNCFRecommender'> - Exception: division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.GraphBased.P3alphaRecommender.P3alphaRecommender'> - Exception: Found array with 0 sample(s) (shape=(0, 0)) while a minimum of 1 is required by the normalize function.
+Algorithm: <class 'topn_baselines_neurals.Recommenders.GraphBased.RP3betaRecommender.RP3betaRecommender'> - Exception: Found array with 0 sample(s) (shape=(0, 0)) while a minimum of 1 is required by the normalize function.
+Algorithm: <class 'topn_baselines_neurals.Recommenders.EASE_R.EASE_R_Recommender.EASE_R_Recommender'> - Exception: float division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.NonPersonalizedRecommender.Random'> - Exception: float division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.NonPersonalizedRecommender.TopPop'> - Exception: float division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.KNN.ItemKNNCFRecommender.ItemKNNCFRecommender'> - Exception: division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.KNN.UserKNNCFRecommender.UserKNNCFRecommender'> - Exception: division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.GraphBased.P3alphaRecommender.P3alphaRecommender'> - Exception: Found array with 0 sample(s) (shape=(0, 0)) while a minimum of 1 is required by the normalize function.
+Algorithm: <class 'topn_baselines_neurals.Recommenders.GraphBased.RP3betaRecommender.RP3betaRecommender'> - Exception: Found array with 0 sample(s) (shape=(0, 0)) while a minimum of 1 is required by the normalize function.
+Algorithm: <class 'topn_baselines_neurals.Recommenders.EASE_R.EASE_R_Recommender.EASE_R_Recommender'> - Exception: float division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.NonPersonalizedRecommender.Random'> - Exception: float division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.NonPersonalizedRecommender.TopPop'> - Exception: float division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.KNN.ItemKNNCFRecommender.ItemKNNCFRecommender'> - Exception: division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.KNN.UserKNNCFRecommender.UserKNNCFRecommender'> - Exception: division by zero
+Algorithm: <class 'topn_baselines_neurals.Recommenders.GraphBased.P3alphaRecommender.P3alphaRecommender'> - Exception: Found array with 0 sample(s) (shape=(0, 0)) while a minimum of 1 is required by the normalize function.
+Algorithm: <class 'topn_baselines_neurals.Recommenders.GraphBased.RP3betaRecommender.RP3betaRecommender'> - Exception: Found array with 0 sample(s) (shape=(0, 0)) while a minimum of 1 is required by the normalize function.

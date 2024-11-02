@@ -23,7 +23,7 @@ def _get_instance(recommender_class, URM_train, ICM_all, UCM_all):
     return recommender_object
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Accept data name as input')
-    parser.add_argument('--dataset', type = str, default='lastFm', help="alibabaFashion / amazonBook / lastFm")
+    parser.add_argument('--dataset', type = str, default='amazonBook', help="alibabaFashion / amazonBook / lastFm")
     args = parser.parse_args()
     dataset_name = args.dataset
     print("<<<<<<<<<<<<<<<<<<<<<< Experiments are running for  "+dataset_name+" dataset Wait for results......")
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     data_path = Path("data/KGIN/"+dataset_name)
     data_path = data_path.resolve()
     # If directory does not exist, create
-
+    
     ############### prepare baseline data ###############
     baseline_models = "baseline_models"
     validation_set = False

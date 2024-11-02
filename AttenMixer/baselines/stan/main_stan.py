@@ -82,11 +82,11 @@ class STAN_MAIN:
             self.unique_items_ids  = self.train_data.ItemId.unique()
             self.test_data = test 
 
-            self.k = 750
-            self.sample_size = 2800
-            self.lambda_spw = 0.17
-            self.lambda_snh = 520
-            self.lambda_inh = 0.51
+            self.k = 5000
+            self.sample_size = 2550
+            self.lambda_spw = 0.81
+            self.lambda_snh = 10
+            self.lambda_inh = 20
             
         else:
             print("Mention your datatypes")

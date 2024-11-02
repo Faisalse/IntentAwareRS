@@ -222,14 +222,14 @@ def main():
 
 
 if __name__ == "__main__":
-    #obj = SequentialRulesMain(data_path, result_path, dataset = opt.dataset)
-    #obj.fit_(opt.topk, opt.topk)
+    obj = SequentialRulesMain(data_path, result_path, dataset = opt.dataset)
+    obj.fit_(opt.topk, opt.topk)
     
-    #obj = SFCKNN_MAIN(data_path, result_path, dataset = opt.dataset)
-    #obj.fit_(opt.topk, opt.topk)
+    obj = SFCKNN_MAIN(data_path, result_path, dataset = opt.dataset)
+    obj.fit_(opt.topk, opt.topk)
     
-    #obj = STAN_MAIN(data_path, result_path, dataset = opt.dataset)
-    #obj.fit_(opt.topk, opt.topk)s
+    obj = STAN_MAIN(data_path, result_path, dataset = opt.dataset)
+    obj.fit_(opt.topk, opt.topk)s
     obj = VSTAN_MAIN(data_path, result_path, dataset = opt.dataset)
     obj.fit_(opt.topk, opt.topk)
     #main()
