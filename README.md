@@ -12,7 +12,7 @@
 
 <h3>Introduction</h3>
 <p align="justify">This reproducibility package was prepared for the paper titled "A Worrying Reproducibility Study of Intent-Aware
-Recommendation Models".  The results reported in this paper were achieved with the help of the codes, which were shared by the original authors of the selected articles. For the implementation of baseline models, we utilized the RecSys2019_DeepLearning_Evaluation  framework. The framework includes the state-of-the-art baseline models for top-n recommender systems. More information about the  RecSys2019_DeepLearning_Evaluation framework can be found by following the provided <a href="https://github.com/MaurizioFD/RecSys2019_DeepLearning_Evaluation" target="_blank">link</a>. For the uploaded picture, the credit goes to ChatGPT. </p>
+Recommendation Models" and accepted in the ACM SIGIR 2025.  The results reported in this paper were achieved with the help of the codes, which were shared by the original authors of the selected articles. For the implementation of baseline models, we utilized the RecSys2019_DeepLearning_Evaluation  framework. The framework includes the state-of-the-art baseline models for top-n recommender systems. More information about the  RecSys2019_DeepLearning_Evaluation framework can be found by following the provided <a href="https://github.com/MaurizioFD/RecSys2019_DeepLearning_Evaluation" target="_blank">link</a>. For the uploaded picture, the credit goes to ChatGPT. </p>
 
 
 <h5>Reproduced articles</h5>
