@@ -22,7 +22,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="KGIN")
 
     # ===== dataset ===== #
-    parser.add_argument("--dataset", nargs="?", default="alibabaFashion", help="Choose a dataset:[lastFm, alibabaFashion, amazonBook]")
+    parser.add_argument("--dataset", nargs="?", default="amazonBook", help="Choose a dataset:[lastFm, alibabaFashion, amazonBook]")
     parser.add_argument('--resolveDataLeakage', nargs='?', default="no", help='yes/no')
     parser.add_argument("--data_path", nargs="?", default="data/", help="Input data path.")
 
